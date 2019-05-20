@@ -33,3 +33,6 @@ HELP.md
 .gradle/
 out/
 build/
+
+### Log ###
+logs/
