@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component
 import java.util.*
 
 @Component
-class MessageHandler {
+class CustomMessageHandler {
 
     @Autowired
     lateinit var messageSource: MessageSource

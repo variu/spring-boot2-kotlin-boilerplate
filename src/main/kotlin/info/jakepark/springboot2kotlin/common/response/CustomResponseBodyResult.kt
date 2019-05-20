@@ -1,6 +1,6 @@
 package info.jakepark.springboot2kotlin.common.response
 
-import info.jakepark.springboot2kotlin.common.handler.MessageHandler
+import info.jakepark.springboot2kotlin.common.handler.CustomMessageHandler
 import info.jakepark.springboot2kotlin.common.response.annotation.IgnoreAdvice
 import org.apache.logging.log4j.LogManager
 import org.springframework.beans.factory.annotation.Autowired
@@ -21,7 +21,7 @@ private val log = LogManager.getLogger()
 class CustomResponseBodyResult : ResponseBodyAdvice<Any> {
 
     @Autowired
-    lateinit var messageHandler: MessageHandler
+    lateinit var customMessageHandler: CustomMessageHandler
 
     override fun supports(returnType: MethodParameter, converterType: Class<out HttpMessageConverter<*>>): Boolean {
         return true
@@ -49,11 +49,11 @@ class CustomResponseBodyResult : ResponseBodyAdvice<Any> {
     }
 
     fun getCustomResponse(responseType: ResponseType, result: Any?): CustomResponse {
-        return CustomResponse(responseType.code, messageHandler.getMessage(responseType), result, null, null)
+        return CustomResponse(responseType.code, customMessageHandler.getMessage(responseType), result, null, null)
     }
 
     fun getCustomResponse(responseType: ResponseType, result: Any?, errors: List<CustomError>): CustomResponse {
-        return CustomResponse(responseType.code, messageHandler.getMessage(responseType), result, errors, null)
+        return CustomResponse(responseType.code, customMessageHandler.getMessage(responseType), result, errors, null)
     }
 
 }

@@ -6,7 +6,8 @@ Kotlin 1.3.31
 
 ### TO DO
 
-* custom execption handler 
 * logging
 * security ( session or oauth )
+* jpa(h2)
+* redis
 * test code(spock? junit?)

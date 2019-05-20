@@ -50,7 +50,8 @@ enum class ResponseType(val code: String, val httpStatus: HttpStatus, val messag
     // [ 9000 ~ 9999 ] common error
     //------------------------------------------------------------------------------------
     BAD_REQUEST("9000", HttpStatus.BAD_REQUEST, "request.badRequest"),
-    NOT_FOUND("9001", HttpStatus.NOT_FOUND, "request.not.found"),
+    BAD_REQUEST_METHOD("9001", HttpStatus.BAD_REQUEST, "response.badRequest.method"),
+    NOT_FOUND("9010", HttpStatus.NOT_FOUND, "request.not.found"),
     INTERNAL_SERVER_ERROR("9999", HttpStatus.INTERNAL_SERVER_ERROR, "internal.server.error"),
     ;
 
