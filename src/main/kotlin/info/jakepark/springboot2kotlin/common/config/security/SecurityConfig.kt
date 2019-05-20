@@ -24,7 +24,7 @@ class SecurityConfig : WebSecurityConfigurerAdapter() {
                 .anonymous()
                 .and()
                 .authorizeRequests()
-                .mvcMatchers(HttpMethod.GET, "/api/ping").permitAll()
+                .mvcMatchers(HttpMethod.GET, "/api/ping", "/api/test/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .csrf().disable()
