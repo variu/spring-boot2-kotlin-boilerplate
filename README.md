@@ -11,16 +11,15 @@ Local
 H2 Console Url : http://localhost:8080/h2-console
 
 
-<br>
-<br>
-<br>
-<br>
-<br>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
 ### TO DO
 
-* banner
-* jpa(h2)
-* security ( session or oauth )
+* jpa
+* security ( session or oauth or both )
 * redis(embedded, lecture)
 * test code(spock? junit?)
