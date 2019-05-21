@@ -30,8 +30,7 @@
         </encoder>
     </appender>
 
-    <appender name="RollingFile"
-              class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <appender name="RollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${LOGS}/spring-boot2-kotlin.log</file>
         <encoder class="net.logstash.logback.encoder.LogstashEncoder">
         </encoder>

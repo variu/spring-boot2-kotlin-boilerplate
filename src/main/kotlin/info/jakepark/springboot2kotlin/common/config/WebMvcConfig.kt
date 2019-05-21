@@ -56,6 +56,7 @@ class WebMvcConfig : WebMvcConfigurer {
         return builder.build()
     }
 
+
 //    @Bean
 //    fun corsFilter(): FilterRegistrationBean<CorsFilter> {
 //        val config = CorsConfiguration()

@@ -25,9 +25,12 @@ class SecurityConfig : WebSecurityConfigurerAdapter() {
                 .and()
                 .authorizeRequests()
                 .mvcMatchers(HttpMethod.GET, "/api/ping", "/api/test/**").permitAll()
+                .antMatchers("/h2-console/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .csrf().disable()
+                .headers().frameOptions().disable()
+
     }
 }
 
