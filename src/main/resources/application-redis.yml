@@ -1,0 +1,13 @@
+spring:
+
+---
+spring:
+  profiles: local
+  redis:
+    host: localhost
+
+---
+spring:
+  profiles: alpha
+  redis:
+    host:

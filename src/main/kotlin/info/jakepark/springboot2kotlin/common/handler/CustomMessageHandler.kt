@@ -11,7 +11,7 @@ import java.util.*
 class CustomMessageHandler {
 
     @Autowired
-    lateinit var messageSource: MessageSource
+    private lateinit var messageSource: MessageSource
 
     fun getMessage(responseType: ResponseType): String {
         return messageSource.getMessage(responseType.message, null, LocaleContextHolder.getLocale())

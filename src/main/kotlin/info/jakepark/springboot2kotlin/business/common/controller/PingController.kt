@@ -1,4 +1,4 @@
-package info.jakepark.springboot2kotlin.business.common
+package info.jakepark.springboot2kotlin.business.common.controller
 
 import org.apache.logging.log4j.LogManager
 import org.springframework.http.MediaType
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController
 private val log = LogManager.getLogger()
 
 @RestController
-@RequestMapping("api", produces = arrayOf(MediaType.APPLICATION_JSON_VALUE))
+@RequestMapping("api", produces = [MediaType.APPLICATION_JSON_VALUE])
 class PingController {
 
     @GetMapping("ping")

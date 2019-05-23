@@ -17,11 +17,11 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice
 
 private val log = LogManager.getLogger()
 
-@RestControllerAdvice(basePackages = arrayOf("info.jakepark.springboot2kotlin"))
+@RestControllerAdvice(basePackages = ["info.jakepark.springboot2kotlin"])
 class CustomResponseBodyResult : ResponseBodyAdvice<Any> {
 
     @Autowired
-    lateinit var customMessageHandler: CustomMessageHandler
+    private lateinit var customMessageHandler: CustomMessageHandler
 
     override fun supports(returnType: MethodParameter, converterType: Class<out HttpMessageConverter<*>>): Boolean {
         return true

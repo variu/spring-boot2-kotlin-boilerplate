@@ -17,10 +17,10 @@ private val log = LogManager.getLogger()
 class CustomExceptionHandler {
 
     @Autowired
-    lateinit var customMessageHandler: CustomMessageHandler
+    private lateinit var customMessageHandler: CustomMessageHandler
 
     @Autowired
-    lateinit var environment: Environment
+    private lateinit var environment: Environment
 
     private fun getCustomResponse(responseType: ResponseType, result: Any?, e: Exception): ResponseEntity<CustomResponse> {
         val responseBody = CustomResponse(responseType.code, customMessageHandler.getMessage(responseType), result, null, null)

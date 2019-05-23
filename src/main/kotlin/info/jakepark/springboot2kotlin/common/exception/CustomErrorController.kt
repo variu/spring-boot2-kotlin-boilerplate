@@ -20,10 +20,10 @@ class CustomErrorController : ErrorController {
 
 
     @Autowired
-    lateinit var errorAttributes: ErrorAttributes
+    private lateinit var errorAttributes: ErrorAttributes
 
     @Autowired
-    lateinit var customMessageHandler: CustomMessageHandler
+    private lateinit var customMessageHandler: CustomMessageHandler
 
     override fun getErrorPath(): String {
         return PATH
