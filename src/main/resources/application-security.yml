@@ -6,10 +6,10 @@ spring:
 
 security:
   jwt:
-    key-store: classpath:security/keystore.jks
-    key-store-password: letmein
-    key-pair-alias: mytestkey
-    key-pair-password: changeme
+    key-store: classpath:security/jwt.jks
+    key-store-password: 1q2w3e4r
+    key-pair-alias: jake
+    key-pair-password: park
 
 ---
 spring:

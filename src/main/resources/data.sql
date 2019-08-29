@@ -49,13 +49,6 @@ CREATE TABLE IF NOT EXISTS oauth_code (
 INSERT INTO oauth_client_details (client_id, client_secret, scope, authorized_grant_types, authorities, access_token_validity)
   VALUES ('clientId', '{bcrypt}$2a$10$vCXMWCn7fDZWOcLnIEhmK.74dvK1Eh8ae2WrWlhr2ETPLoxQctN4.', 'read,write', 'password,refresh_token,client_credentials', 'ROLE_CLIENT', 300);
 
-CREATE TABLE IF NOT EXISTS users (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  username VARCHAR(256) NOT NULL,
-  password VARCHAR(256) NOT NULL,
-  enabled TINYINT(1),
-  UNIQUE KEY unique_username(username)
-);
 
 CREATE TABLE IF NOT EXISTS authorities (
   username VARCHAR(256) NOT NULL,
@@ -64,8 +57,8 @@ CREATE TABLE IF NOT EXISTS authorities (
 );
 
 -- The encrypted password is `pass`
-INSERT INTO users (id, username, password, enabled) VALUES (1, 'user', '{bcrypt}$2a$10$cyf5NfobcruKQ8XGjUJkEegr9ZWFqaea6vjpXWEaSqTa2xL9wjgQC', 1);
-INSERT INTO authorities (username, authority) VALUES ('user', 'ROLE_USER');
+INSERT INTO user (name, password, status) VALUES ('jake', '{bcrypt}$2a$10$cyf5NfobcruKQ8XGjUJkEegr9ZWFqaea6vjpXWEaSqTa2xL9wjgQC', 1);
+INSERT INTO authorities (username, authority) VALUES ('jake', 'ROLE_USER');
 
 
 

@@ -10,5 +10,11 @@ import javax.persistence.Table
 data class User (
 
     @Column(nullable = false)
-    val name: String
+    val name: String,
+
+    @Column
+    val password: String,
+
+    @Column
+    val status: Int
 ) : AbstractAuditEntity<User, Long>()
